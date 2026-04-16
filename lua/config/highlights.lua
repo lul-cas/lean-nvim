@@ -1,0 +1,6 @@
+vim.api.nvim_set_hl(0, "@keyword", { fg = "#ffea00"})
+vim.api.nvim_set_hl(0, "@string", { fg = "#00ff1a" })
+vim.api.nvim_set_hl(0, "@function", { fg = "#ee00ff" })
+vim.api.nvim_set_hl(0, "@type", { fg = "#2eb2ff" })
+vim.api.nvim_set_hl(0, "@comment", { fg = "#5c6370", italic = true })
+vim.api.nvim_set_hl(0, "@variable", { fg = "#00c3ff" })
