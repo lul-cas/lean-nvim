@@ -1,5 +1,26 @@
 return {
 	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim" },
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"clangd",
+					"pyright",
+					"ts_ls",
+					"elixirls",
+				}
+			})
+		end
+	},
+	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPost", "BufNewFile" },
 		config = function()
