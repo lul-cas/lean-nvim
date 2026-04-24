@@ -6,8 +6,10 @@ return {
 		priority = 1000,
 		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
-		config = function ()
-			require("nvim-treesitter").setup({
+		config = function()
+			require("nvim-treesitter.install").compilers = { "gcc" }
+
+			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"lua",
 					"vim",
@@ -27,14 +29,15 @@ return {
 					"c_sharp",
 					"java",
 					"sql",
-					"c_sharp",
 					"markdown",
 					"markdown_inline",
-					"python",
+					"elixir",
+					"heex",
+					"eex",
 				},
 				highlight = { enable = true },
-				indent = { enable = true }
+				indent = { enable = true },
 			})
-		end
-	}
+		end,
+	},
 }
