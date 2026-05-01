@@ -15,7 +15,12 @@ return {
 					"clangd",
 					"pyright",
 					"ts_ls",
+					"html",
+					"cssls",
+					"jsonls",
+					"bashls",
 					"elixirls",
+					"omnisharp"
 				}
 			})
 		end
@@ -58,6 +63,8 @@ return {
 				cssls = {},
 				jsonls = {},
 				bashls = {},
+				omnisharp = {},
+				elixirls = {},
 			}
 			for server, opts in pairs(servers) do
 				lspconfig[server].setup(opts)
