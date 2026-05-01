@@ -40,3 +40,6 @@ end, { desc = "Open terminal below" })
 
 map("t", "<C-x>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 map("n", "<leader>w", "<C-w>w", { desc = "Cycle windows" })
+
+map("v", "<Tab>", ">gv", { desc = "Indent right" })
+map("v", "<S-Tab>", "<gv", { desc = "Indent left" })
