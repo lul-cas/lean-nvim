@@ -58,7 +58,11 @@ return {
 				jsonls = {},
 				bashls = {},
 				omnisharp = {},
-				elixirls = {},
+				elixirls = {
+				    cmd = {
+				      vim.fn.stdpath("data") .. "/mason/bin/elixir-ls.cmd",
+				    },
+				},
 			}
 			for server, opts in pairs(servers) do
 				lspconfig[server].setup(opts)
