@@ -36,7 +36,15 @@ return {
 					"eex",
 				},
 				highlight = { enable = true },
-				indent = { enable = true },
+				indent = {
+          enable = true,
+          disable = {
+            "javascript",
+            "typescript",
+            "javascriptreact",
+            "typescriptreact",
+          }
+        },
 			})
 		end,
 	},
