@@ -20,12 +20,10 @@ map('i', '<C-z>', '<Esc>u', {noremap = true, silent = true, desc = "UNDO" })
 map('i', '<C-y>', '<C-r>', {noremap = true, silent = true, desc = "REDO" })
 
 map('n', '<C-b>', ':vsplit<CR>', { noremap = true, silent = true, desc = "Vertical buffer split" })
-
+map('n', '<C-x>', ':split<CR>', { noremap = true, silent = true, desc = "Horizontal buffer split" })
 
 map('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true, desc = "Move current line up" })
 map('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true, desc = "Move current line down" })
-
-
 map('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move selection down" })
 map('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move selection up" })
 
@@ -43,3 +41,8 @@ map("n", "<leader>w", "<C-w>w", { desc = "Cycle windows" })
 
 map("v", "<Tab>", ">gv", { desc = "Indent right" })
 map("v", "<S-Tab>", "<gv", { desc = "Indent left" })
+
+map("n", "xh", "<C-w>h", { desc = "Go to left window" })
+map("n", "xj", "<C-w>j", { desc = "Go to down window" })
+map("n", "xk", "<C-w>k", { desc = "Go to up window" })
+map("n", "xl", "<C-w>l", { desc = "Go to right window" })
