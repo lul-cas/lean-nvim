@@ -15,6 +15,7 @@ opt.smartindent = false
 opt.autoindent = true
 opt.laststatus = 2
 opt.report = 0 --Always show messages when lines changes
+opt.updatetime = 200
 
 opt.scrolloff = 999
 
