@@ -57,7 +57,20 @@ return {
 				cssls = {},
 				jsonls = {},
 				bashls = {},
-				omnisharp = {},
+				omnisharp = {
+            cmd = {
+              vim.fn.stdpath("data") .. "/mason/bin/omnisharp.cmd",
+              "-z",
+              "--hostPID",
+              tostring(vim.fn.getpid()),
+              "DotNet:enablePackageRestore=false",
+              "--encoding",
+              "utf-8",
+              "--languageserver",
+              "Sdk:IncludePrereleases=true",
+              "FormattingOptions:EnableEditorConfigSupport=true",
+            },
+        },
 				elixirls = {
 				    cmd = {
 				      vim.fn.stdpath("data") .. "/mason/bin/elixir-ls.cmd",
