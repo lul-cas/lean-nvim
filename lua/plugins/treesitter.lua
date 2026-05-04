@@ -34,6 +34,7 @@ return {
 					"elixir",
 					"heex",
 					"eex",
+          "razor",
 				},
 				highlight = { enable = true },
 				indent = {
