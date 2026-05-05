@@ -1,3 +1,11 @@
+local is_win = vim.fn.has("Win32") == 1
+local mason_bin = vim.fn.stdpath("data") .. "/mason/bin"
+
+local elixir_ls_cmd = is_win and (mason_bin .. "/elixir-ls.cmd") or (mason_bin .. "/elixir-ls")
+local omnisharp_cmd = is_win and (mason_bin .. "/omnisharp.cmd") or (mason_bin .. "/OmniSharp")
+
+
+
 return {
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -59,7 +67,7 @@ return {
 				bashls = {},
 				omnisharp = {
             cmd = {
-              vim.fn.stdpath("data") .. "/mason/bin/omnisharp.cmd",
+              omnisharp_cmd,
               "-z",
               "--hostPID",
               tostring(vim.fn.getpid()),
@@ -73,8 +81,8 @@ return {
         },
 				elixirls = {
 				    cmd = {
-				      vim.fn.stdpath("data") .. "/mason/bin/elixir-ls.cmd",
-				    },
+				      elixir_ls_cmd
+            },
 				},
 			}
 			for server, opts in pairs(servers) do
